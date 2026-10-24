@@ -11,11 +11,9 @@ end)
 pcall(RegisterHook, "/Script/EnhancedUI.CPP_EU_WBP_Activatable:FinishedOpen", function(ctx)
     local screen = ctx:get()
     if screen:GetClass():GetFName():ToString() ~= "WBP_DemoIntroductionLayout_C" then return end
-    -- Input is ignored on the frame the screen finishes opening, so confirm shortly after
-    ExecuteWithDelay(50, function()
-        ExecuteInGameThread(function()
-            screen:OnRequestClose()
-            screen:InputDecide(0)
-        end)
+    -- Input is ignored on the frame the screen finishes opening, so confirm on the next frame
+    ExecuteInGameThreadAfterFrames(1, function()
+        screen:OnRequestClose()
+        screen:InputDecide(0)
     end)
 end)
