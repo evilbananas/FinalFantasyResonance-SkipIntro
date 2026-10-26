@@ -2,7 +2,7 @@
 
 A [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) mod for **Final Fantasy Resonance** that skips the intro logo screens and boots straight to the main menu.
 
-Also works with the **demo**, where it additionally skips the "thank you" screen that normally requires pressing `F`.
+Also works with the **Demo**, where it additionally skips the "thank you" screen.
 
 ## Requirements
 - Final Fantasy Resonance or Final Fantasy Resonance Demo
